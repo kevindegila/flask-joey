@@ -42,7 +42,7 @@ conda activate translator && pip install -r requirements.txt
  ----
 The model can be quite big and Github have restrictions on the size of your 
 free repos. You can host your model on google drive as I do. 
-If you want to try the English to fongbe :blush: , you can download it here:
+If you want to try the English to fongbe model :blush: , you can download it here:
 https://drive.google.com/open?id=1PbrojtNSeZf8QpYmgJXtbcgYijVUU7Ay
 
 I've left the vocab files in the repo. Just replace them with yours if you
