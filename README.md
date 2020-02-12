@@ -49,9 +49,7 @@ I've left the vocab files in the repo. Just replace them with yours if you
 want to try your trained model.
 
 ## Running the App
-You can run the app with this commmand
-
-And Execute this command to start making predictions
+You can run the app with this commmand and start making predictions
 ```sh
 gunicorn -b 0.0.0.0:8080 app:app
 ```
