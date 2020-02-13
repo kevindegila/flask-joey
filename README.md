@@ -16,7 +16,8 @@ The model used was created using this
 git clone https://github.com/kevindegila/flask-joey
 ```
 ## Install
-cd into the repo and Create a python 3.7 virtual environment (with conda):
+cd into the repo and Create a python 3.7 virtual environment with your desired
+env manager. Here is an exemple with conda:
 ```sh
 cd flask-joey && conda create --name translator python=3.7
 ```
@@ -24,6 +25,8 @@ Activate the environment and install all the requirements:
 ```sh
 conda activate translator && pip install -r requirements.txt
 ```
+
+
 ## Customize to serve your model
 
 * Your model : A checkpoint file named `best.ckpt`  should be in the
