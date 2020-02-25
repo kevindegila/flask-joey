@@ -47,7 +47,7 @@ Inside Python run the following command
 >>> conn.close()
 >>> exit()
  ```
-To view each contribution run the following command in the previously active Python terminal
+To view each contribution run the following command
 
 ```sh
 >>> for row in c.execute('SELECT * FROM trReviews'):
