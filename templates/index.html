@@ -25,9 +25,8 @@
 
             <div class="text-center">
 
-                <form action="/" method="post" enctype="multipart/form-data" >
+                <form method="post" action ="/results" enctype="multipart/form-data" >
                     <div class="form-group text-center">
-<!--                        <input name="message">-->
                          <div class="form-group">
                               <h2>English</h2>
                               <textarea class="form-control" id="exampleTextarea" name="message" style="width: 1200px; font-size:3em" placeholder="Your Text in English">{{ message }}</textarea>
@@ -42,7 +41,7 @@
             {% if predict %}
 
           <h1>  {{ answer }}</h1>
-        {% endif %}
+            {% endif %}
         </div>
 
     </div>
