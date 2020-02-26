@@ -25,8 +25,34 @@ Activate the environment and install all the requirements:
 ```sh
 conda activate translator && pip install -r requirements.txt
 ```
+## Create a database
 
+Run Python at your terminal
 
+```sh
+python3
+```
+Inside Python run the following command
+
+```sh
+>>> import sqlite3,os
+>>> conn = sqlite3.connect("trReviews.sqlite")
+>>> c = conn.cursor()
+>>> c.execute('DROP TABLE IF EXISTS trReviews')
+<sqlite3.Cursor object at 0x7f0fff6c2f10>
+>>> c.execute('CREATE TABLE trReviews'\
+...           '(date TEXT, OriginalText TEXT, translationSuggested TEXT)')
+<sqlite3.Cursor object at 0x7f0fff6c2f10>
+>>> conn.commit()
+>>> conn.close()
+>>> exit()
+ ```
+To view each contribution run the following command
+
+```sh
+>>> for row in c.execute('SELECT * FROM trReviews'):
+...     print(row)
+```
 ## Customize to serve your model
 
 * Your model : A checkpoint file named `best.ckpt`  should be in the
@@ -67,4 +93,4 @@ Thanks to the [Masakhane](https://github.com/masakhane-io/masakhane) community f
 Thanks to [Julia](https://github.com/juliakreutzer/) 
 for [JoeyNMT](https://github.com/joeynmt/joeynmt)
 and [Slack-joey](https://github.com/juliakreutzer/slack-joey).
-This is based off her work. I just added a simple front end and the flask code.
+This is based of her work. I just added a simple front end and the flask code.

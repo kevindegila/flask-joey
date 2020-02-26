@@ -17,39 +17,37 @@
 
     <div class="jumbotron bg-secondary text-white text-center">
         <h1>English to fongbe <img src="static/benin.png"></img>
-
-    </div>
-
-    <div class="container">
-
-
-            <div class="text-center">
-
-                <form method="post" action ="/results" enctype="multipart/form-data" >
-                    <div class="form-group text-center">
-                         <div class="form-group">
-                              <h2>English</h2>
-                              <textarea class="form-control" id="exampleTextarea" name="message" style="width: 1200px; font-size:3em" placeholder="Your Text in English">{{ message }}</textarea>
-                            </div>
-                        <button type="submit" class="btn btn-primary">Translate</button>
-                    </div>
-                </form>
-
-            </div>
-
-        <div class="text-center" style="margin-bottom: 50px">
-            {% if predict %}
-
-          <h1>  {{ answer }}</h1>
-            {% endif %}
-        </div>
-
     </div>
 
 
+<h3 align="center"> Your text in English is :  </h3>
+  <div class="text-center" > <font size="5"> {{ message }} </font> </div>
 
+<h3 align="center"> The translation in Fongbe is :  </h3>
+  <div class="text-center" > <font size="5"> {{ answer }} </font> </div>
+	
+<div class="text-center">
+  <form action="/thanks" method="post">
+    <button type="submit" class="btn btn-success" value ="Correct" name=feedback_button >Correct</button>    
+	<input type=hidden value="{{ answer }}" name='prediction'>
+	<input type=hidden value="{{ message }}" name='review'>
+  </form>
+</div>
 
-<!--    <h3 class="text-center">Made by <a href="https://github.com/kevindegila" target="_blank"> Kevin Degila</a> </h3>-->
+<div class="text-center">
+  <form action="/reviews" method="post">
+    <button type="submit" class="btn btn-danger" value="Incorrect" name=feedback_button >Incorrect</button>
+        <input type=hidden value="{{ answer }}" name='prediction'>
+	<input type=hidden value="{{ message }}" name='review'>
+  </form>
+</div>
+
+<div class="text-center">
+  <form action="/">
+    <button type="submit" class="btn btn-secondary"> Submit another review </button>
+  </form>
+</div>
+
 
 </body>
 </html>

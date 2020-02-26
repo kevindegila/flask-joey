@@ -11,45 +11,20 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
-
-
 <body>
 
     <div class="jumbotron bg-secondary text-white text-center">
         <h1>English to fongbe <img src="static/benin.png"></img>
-
     </div>
 
-    <div class="container">
+<h3 align="center">Thank you for your feedback!</h3>
 
-
-            <div class="text-center">
-
-                <form method="post" action ="/results" enctype="multipart/form-data" >
-                    <div class="form-group text-center">
-                         <div class="form-group">
-                              <h2>English</h2>
-                              <textarea class="form-control" id="exampleTextarea" name="message" style="width: 1200px; font-size:3em" placeholder="Your Text in English">{{ message }}</textarea>
-                            </div>
-                        <button type="submit" class="btn btn-primary">Translate</button>
-                    </div>
-                </form>
-
-            </div>
-
-        <div class="text-center" style="margin-bottom: 50px">
-            {% if predict %}
-
-          <h1>  {{ answer }}</h1>
-            {% endif %}
-        </div>
-
-    </div>
-
-
-
-
-<!--    <h3 class="text-center">Made by <a href="https://github.com/kevindegila" target="_blank"> Kevin Degila</a> </h3>-->
+<div class="text-center" id='button'>
+	  <form action="/">
+	    <button type=submit class = "btn btn-primary"> Submit another review </button>
+	  </form>
+</div>
 
 </body>
+
 </html>

@@ -17,39 +17,29 @@
 
     <div class="jumbotron bg-secondary text-white text-center">
         <h1>English to fongbe <img src="static/benin.png"></img>
-
     </div>
 
-    <div class="container">
+<h4 align="center"> Your text in English is :  </h4>
+<div class="text-center" > <font size="4"> {{ review }} </font> </div>
 
+<h4 align="center"> The correct translation in Fongbe should be  </h4>
+	<div class ="container">
+	  <div class="text-center">
+	        <form method="post" action ="/reviews-thanks" enctype="multipart/form-data" >
+	            <div class="form-group text-center">
+	                 <div class="form-group">
+			      <div class="text-center" > <font size="4"> Some fongbe's alphabets : ɛ  ɔ  ɑ̃  ɛ̃  ĩ ǐ ɔ̃  ɔ̀  ɔ̃́ ũ ǔ ɖ </font> </div>
+	                      <textarea class="form-control" id="exampleTextarea" name="correction" style="width: 1200px; font-size:3em" placeholder="Type the text in Fongbe">{{ correction }}</textarea>
+			      <input type=hidden value="{{ review }}" name='review'>
+	                 </div>
+	                 <button type="submit" class="btn btn-primary"> Contribute </button>
+	            </div>
+	        </form>
 
-            <div class="text-center">
-
-                <form method="post" action ="/results" enctype="multipart/form-data" >
-                    <div class="form-group text-center">
-                         <div class="form-group">
-                              <h2>English</h2>
-                              <textarea class="form-control" id="exampleTextarea" name="message" style="width: 1200px; font-size:3em" placeholder="Your Text in English">{{ message }}</textarea>
-                            </div>
-                        <button type="submit" class="btn btn-primary">Translate</button>
-                    </div>
-                </form>
-
-            </div>
-
-        <div class="text-center" style="margin-bottom: 50px">
-            {% if predict %}
-
-          <h1>  {{ answer }}</h1>
-            {% endif %}
-        </div>
-
-    </div>
-
-
-
-
-<!--    <h3 class="text-center">Made by <a href="https://github.com/kevindegila" target="_blank"> Kevin Degila</a> </h3>-->
+	   </div>
+		
+	</div>
 
 </body>
+
 </html>
